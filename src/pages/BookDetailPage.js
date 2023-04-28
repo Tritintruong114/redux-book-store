@@ -14,10 +14,13 @@ const BookDetailPage = () => {
   const [addingBook, setAddingBook] = useState(false);
   const params = useParams();
   const bookId = params.id;
+  //loadData trong Router,
 
   const addToReadingList = (book) => {
     setAddingBook(book);
   };
+
+
 
   useEffect(() => {
     const postData = async () => {
@@ -33,6 +36,7 @@ const BookDetailPage = () => {
     };
     postData();
   }, [addingBook]);
+
 
   useEffect(() => {
     const fetchData = async () => {

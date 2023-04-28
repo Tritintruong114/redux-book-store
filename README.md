@@ -13,3 +13,7 @@ $ npm install
 - Run `npm run dev` to start the `json-server` on port 5000.
 
 - Run `npm start` to start the React app.
+
+
+//redux
+

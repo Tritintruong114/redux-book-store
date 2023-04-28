@@ -21,6 +21,28 @@
       "title": "Fairy tales",
       "year": 1836,
       "id": "A8770585A41"
+    },
+    {
+      "author": "Chinua Achebe",
+      "country": "Nigeria",
+      "imageLink": "images/things-fall-apart.jpg",
+      "language": "English",
+      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
+      "pages": 209,
+      "title": "Things Fall Apart",
+      "year": 1958,
+      "id": "8F627C92410"
+    },
+    {
+      "author": "Unknown",
+      "country": "Iceland",
+      "imageLink": "images/njals-saga.jpg",
+      "language": "Old Norse",
+      "link": "https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga\n",
+      "pages": 384,
+      "title": "Njál's Saga",
+      "year": 1350,
+      "id": "DD6341E90F6"
     }
   ],
   "books": [

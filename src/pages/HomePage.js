@@ -6,12 +6,23 @@ import SearchForm from "../components/SearchForm";
 import api from "../apiService";
 import { FormProvider } from "../form";
 import { useForm } from "react-hook-form";
-import { Container, Alert, Box, Card, Stack, CardMedia, CardActionArea, Typography, CardContent } from "@mui/material";
-
-
+import {
+  Container,
+  Alert,
+  Box,
+  Card,
+  Stack,
+  CardMedia,
+  CardActionArea,
+  Typography,
+  CardContent,
+} from "@mui/material";
 
 const BACKEND_API = process.env.REACT_APP_BACKEND_API;
-
+//initialState={
+//book : [], pageNum : 1 , totalPage = 10 , limit = 10 , errorMessage : "" , loading: true, favoritesBook:[]}
+//MiddleWare
+//
 const HomePage = () => {
   const [books, setBooks] = useState([]);
   const [pageNum, setPageNum] = useState(1);
@@ -19,17 +30,19 @@ const HomePage = () => {
   const limit = 10;
 
   const [loading, setLoading] = useState(false);
+
   const [query, setQuery] = useState("");
+
   const [errorMessage, setErrorMessage] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const handleClickBook = (bookId) => {
     navigate(`/books/${bookId}`);
   };
 
-
-
-
+  //useEffect bo vao redux ,
+  //initial State
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -48,7 +61,7 @@ const HomePage = () => {
   }, [pageNum, limit, query]);
   //--------------form
   const defaultValues = {
-    searchQuery: ""
+    searchQuery: "",
   };
   const methods = useForm({
     defaultValues,
@@ -60,7 +73,9 @@ const HomePage = () => {
   return (
     <Container>
       <Stack sx={{ display: "flex", alignItems: "center", m: "2rem" }}>
-        <Typography variant="h3" sx={{ textAlign: "center" }}>Book Store</Typography>
+        <Typography variant="h3" sx={{ textAlign: "center" }}>
+          Book Store
+        </Typography>
         {errorMessage && <Alert severity="danger">{errorMessage}</Alert>}
         <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
           <Stack
@@ -81,19 +96,26 @@ const HomePage = () => {
       </Stack>
       <div>
         {loading ? (
-          <Box sx={{ textAlign: "center", color: "primary.main" }} >
+          <Box sx={{ textAlign: "center", color: "primary.main" }}>
             <ClipLoader color="inherit" size={150} loading={true} />
           </Box>
         ) : (
-          <Stack direction="row" spacing={2} justifyContent="space-around" flexWrap="wrap">
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent="space-around"
+            flexWrap="wrap"
+          >
             {books.map((book) => (
               <Card
-                key={book.id} onClick={() => handleClickBook(book.id)}
+                key={book.id}
+                onClick={() => handleClickBook(book.id)}
                 sx={{
                   width: "12rem",
                   height: "27rem",
                   marginBottom: "2rem",
-                }}>
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -104,7 +126,6 @@ const HomePage = () => {
                     <Typography gutterBottom variant="h5" component="div">
                       {`${book.title}`}
                     </Typography>
-
                   </CardContent>
                 </CardActionArea>
               </Card>

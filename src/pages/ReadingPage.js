@@ -17,10 +17,13 @@ const ReadingPage = () => {
     navigate(`/books/${bookId}`);
   };
 
+
+  //dispatch Removed(bookId)
   const removeBook = (bookId) => {
     setRemovedBookId(bookId);
   };
 
+  //dispatch get Favorites, map ra trong array initialState
   useEffect(() => {
     if (removedBookId) return;
     const fetchData = async () => {
@@ -36,6 +39,8 @@ const ReadingPage = () => {
     fetchData();
   }, [removedBookId]);
 
+
+  //dispatch RemoveBookId{...bookFavorites}
   useEffect(() => {
     if (!removedBookId) return;
     const fetchData = async () => {
