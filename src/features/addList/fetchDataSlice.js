@@ -15,7 +15,7 @@ export const getBooks = createAsyncThunk(
 
 const initialState = {
   page: 10,
-  pageNum: 10,
+  pageNum: 11,
   totalPage: 10,
   limit: 10,
   books: [],
