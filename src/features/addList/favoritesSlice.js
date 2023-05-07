@@ -31,22 +31,6 @@ export const getDeletedList = createAsyncThunk(
   }
 );
 
-// useEffect(() => {
-//   if (!removedBookId) return;
-//   const fetchData = async () => {
-//     setLoading(true);
-//     try {
-//       await api.delete(`/favorites/${removedBookId}`);
-//       toast.success("The book has been removed");
-//       setRemovedBookId("");
-//     } catch (error) {
-//       toast(error.message);
-//     }
-//     setLoading(false);
-//   };
-//   fetchData();
-// }, [removedBookId]);
-
 export const favoritesSlice = createSlice({
   name: "favorites",
   initialState,

@@ -25,6 +25,7 @@ const BookDetailPage = () => {
   const addToReadingList = (book) => {
     dispatch(addReadingList(book));
     dispatch(postFavoriteBook(book));
+    console.log(book);
   };
 
   useEffect(() => {
