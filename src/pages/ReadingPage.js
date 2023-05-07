@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Button,
@@ -13,6 +13,7 @@ import {
 import { ClipLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
 import {
+  removeBook,
   fetchFavoritesData,
   getDeletedList,
 } from "../features/addList/favoritesSlice";

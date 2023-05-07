@@ -29,8 +29,6 @@ const HomePage = () => {
 
   //
   const navigate = useNavigate();
-  //
-
   const handleClickBook = (bookId) => {
     navigate(`/books/${bookId}`);
   };
@@ -38,7 +36,7 @@ const HomePage = () => {
 
   useEffect(() => {
     dispatch(getBooks());
-  }, []);
+  }, [dispatch]);
 
   //--------------form
   const defaultValues = {
