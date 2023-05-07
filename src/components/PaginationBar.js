@@ -3,14 +3,18 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { useSelector, useDispatch } from "react-redux";
 import { renderPage, getBooks } from "../features/addList/fetchDataSlice";
+
 const PaginationBar = () => {
   const { page, totalPage } = useSelector((store) => store.fetchData);
   const dispatch = useDispatch();
+  //
+  // console.log(page);
 
   const handleChange = (event, value) => {
     dispatch(renderPage(value));
-    dispatch(getBooks());
+    dispatch(getBooks(value));
   };
+
   return (
     <Stack spacing={2}>
       <Pagination

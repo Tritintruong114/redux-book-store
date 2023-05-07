@@ -24,13 +24,13 @@ const BACKEND_API = process.env.REACT_APP_BACKEND_API;
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const { limit, isLoading, books, totalPage, page, pageNum } = useSelector(
-    (store) => store.fetchData
-  );
+  const { isLoading, books } = useSelector((store) => store.fetchData);
   //
 
   //
   const navigate = useNavigate();
+  //
+
   const handleClickBook = (bookId) => {
     navigate(`/books/${bookId}`);
   };
@@ -47,10 +47,7 @@ const HomePage = () => {
   const methods = useForm({
     defaultValues,
   });
-  // const { handleSubmit } = methods;
-  // // const onSubmit = (data) => {
-  // //   setQuery(data.searchQuery);
-  // // };
+
   return (
     <Container>
       <Stack sx={{ display: "flex", alignItems: "center", m: "2rem" }}>
