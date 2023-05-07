@@ -12,26 +12,26 @@
       "id": "A8770585A41"
     },
     {
-      "author": "Chinua Achebe",
-      "country": "Nigeria",
-      "imageLink": "images/things-fall-apart.jpg",
-      "language": "English",
-      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
-      "pages": 209,
-      "title": "Things Fall Apart",
-      "year": 1958,
-      "id": "8F627C92410"
+      "author": "Dante Alighieri",
+      "country": "Italy",
+      "imageLink": "images/the-divine-comedy.jpg",
+      "language": "Italian",
+      "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n",
+      "pages": 928,
+      "title": "The Divine Comedy",
+      "year": 1315,
+      "id": "9471F309642"
     },
     {
       "author": "Unknown",
-      "country": "Iceland",
-      "imageLink": "images/njals-saga.jpg",
-      "language": "Old Norse",
-      "link": "https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga\n",
-      "pages": 384,
-      "title": "Njál's Saga",
-      "year": 1350,
-      "id": "DD6341E90F6"
+      "country": "Sumer and Akkadian Empire",
+      "imageLink": "images/the-epic-of-gilgamesh.jpg",
+      "language": "Akkadian",
+      "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n",
+      "pages": 160,
+      "title": "The Epic Of Gilgamesh",
+      "year": -1700,
+      "id": "4F45963BC33"
     }
   ],
   "books": [
