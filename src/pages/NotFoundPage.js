@@ -1,4 +1,3 @@
-
 import { Link as RouterLink } from "react-router-dom";
 import { Box, Button, Typography, Container } from "@mui/material";
 
@@ -13,7 +12,7 @@ function NotFoundPage() {
           Sorry, we couldn’t find the page you requested.
         </Typography>
         <Button to="/" variant="contained" component={RouterLink}>
-          Go to Home
+          Go to Hom
         </Button>
       </Box>
     </Container>
