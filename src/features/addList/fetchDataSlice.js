@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const initialState = {
   page: 1,
@@ -17,8 +18,25 @@ export const getBooks = createAsyncThunk("book/getBooks", async (page) => {
     return resp.data;
   } catch (error) {
     console.log(error);
+    toast.error(error.message);
   }
 });
+
+export const getSearch = createAsyncThunk(
+  "search/getSearch",
+  async (bookName) => {
+    let url = `http://localhost:5000/books/?_page=1/&_limit=10&q=${bookName}`;
+    if (bookName) {
+      try {
+        const resp = await axios(url);
+        return resp.data;
+      } catch (error) {
+        console.log(error);
+        toast.error(error.message);
+      }
+    }
+  }
+);
 
 export const fetchDataSlice = createSlice({
   name: "addList",
@@ -40,7 +58,17 @@ export const fetchDataSlice = createSlice({
         state.books = action.payload;
       })
       .addCase(getBooks.rejected, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(getSearch.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getSearch.fulfilled, (state, action) => {
         state.isLoading = false;
+        state.books = action.payload;
+      })
+      .addCase(getSearch.rejected, (state, action) => {
+        state.isLoading = true;
       });
   },
 });

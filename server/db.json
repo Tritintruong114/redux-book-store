@@ -32,6 +32,28 @@
       "title": "The Epic Of Gilgamesh",
       "year": -1700,
       "id": "4F45963BC33"
+    },
+    {
+      "author": "Chinua Achebe",
+      "country": "Nigeria",
+      "imageLink": "images/things-fall-apart.jpg",
+      "language": "English",
+      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
+      "pages": 209,
+      "title": "Things Fall Apart",
+      "year": 1958,
+      "id": "8F627C92410"
+    },
+    {
+      "author": "Unknown",
+      "country": "India/Iran/Iraq/Egypt/Tajikistan",
+      "imageLink": "images/one-thousand-and-one-nights.jpg",
+      "language": "Arabic",
+      "link": "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\n",
+      "pages": 288,
+      "title": "One Thousand and One Nights",
+      "year": 1200,
+      "id": "BFECD288E75"
     }
   ],
   "books": [
